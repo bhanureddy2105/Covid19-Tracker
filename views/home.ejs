@@ -1,0 +1,49 @@
+<%- include('header') %>
+
+  </nav>
+<div class="row">
+  <div class="col-lg-4 col-sm-6">
+    <div class="card " style="width: 16rem; background-color: #add8e6;">
+      <div class="card-body">
+        <h5 class="card-title">Total Active Cases</h5>
+        <p class="card-text"><%= activeCases/100000 %> Lakhs</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-sm-6">
+    <div class="card" style="width: 16rem; background-color: #a8ee90;">
+      <div class="card-body">
+        <h5 class="card-title">Recovered</h5>
+        <p class="card-text"><%= recovered/100000 %> Lakhs(<%= recoveredNew %> &uarr;) </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-sm-6">
+    <div class="card" style="width: 16rem; background-color: #FA8072;">
+      <div class="card-body">
+        <h5 class="card-title">Deaths</h5>
+        <p class="card-text"><%= deaths/100000 %> Lakhs(<%= deathsNew %> &uarr;)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="marque">
+  <marquee behavior="scroll" scrollamount="10" direction="left">Total number of tests during the previous day
+    <%= tests/100000 %> lakhs
+  </marquee>
+  <marquee behavior="scroll" scrollamount="10" direction="right">(↑↓ Status change since yesterday) Last updated at
+    <%= lastUpdated %> </marquee>
+</div>
+
+<form action="/" method="POST">
+  <div class="form-group">
+    <input type="text" class="form-control" name="search" placeholder="Search for a State Statistics"
+      autocomplete="off">
+    <a href="/views/state.ejs"><button type="submit" class="btn btn-success">Search</button></a>
+  </div>
+</form>
+
+</body>
+
+</html>

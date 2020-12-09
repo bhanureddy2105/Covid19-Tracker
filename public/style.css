@@ -1,0 +1,106 @@
+.row{
+    margin: 0;
+}
+
+body{
+    background-color: #f4eeed;
+}
+
+.card{
+    margin: 70px 50px 0 50px;
+    transition: border-radius 0.1s;
+}
+
+.card:hover{
+    border-radius: 20px;
+}
+
+
+.card-body{
+    text-align: center;
+    cursor: context-menu;
+}
+
+.card-text{
+    font-weight: 600;
+}
+
+.marque{
+    margin: 50px 0;
+    background-color: #f4eeed;
+}
+
+.navbar{
+    background-color: #f4eeed !important;
+    padding: 10px 25px;
+
+}
+
+marquee{
+    margin: 15px 0 0;
+}
+
+input{
+   width: 35% !important; 
+   text-align: center;
+   margin: auto;
+   border-radius: 30px !important;
+   background-color: #ffffff !important;
+}
+
+.form-group{
+    text-align: center;
+}
+.btn-success{
+    width: 150px;
+    margin: 20px;
+}
+
+.footer {
+    /* background-color: #66BFBF; */
+    padding: 50px 0 10px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.fab{
+    margin: 0 20px 15px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.fab:hover{
+    opacity: 0.5;
+}
+
+
+
+.jumbotron{
+    margin: 10px 0;
+    background-color: #ffcccb;
+    text-align: center;
+}
+
+a{
+    color: none !important;
+}
+
+.display-4{
+    margin: 0 0 20px;
+}
+
+.er{
+    width: 25%;
+    margin: 20px auto 10px;
+}
+@media(max-width:320px){
+    .row{
+        position: relative;
+        right: 30px;
+    }
+
+    input{
+        width: 75% !important;
+    }
+}
+
