@@ -53,7 +53,7 @@ app.post("/", (req, res) => {
     const url = "https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true";
     var x;
     var state;
-    const userInput = _.startCase(req.body.search);
+    var userInput = _.startCase(req.body.search);
     https.get(url, (response) => {
         response.on("data", (data) => {
             const covidData = JSON.parse(data);
@@ -62,6 +62,11 @@ app.post("/", (req, res) => {
                     state = covidData.regionData[i].region;
                     x = i;
                 } 
+            }
+            if(userInput=="Telangana"){
+                state=covidData.regionData[30].region;
+                x=30;
+                userInput=state
             }
                 if(state === userInput){
                 const active = covidData.regionData[x].totalInfected;
