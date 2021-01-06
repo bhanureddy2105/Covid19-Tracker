@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static('public'));
 
+var year=new Date().getFullYear()
+
 app.get("/", (req, res) => {
     const url = "https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true";
     https.get(url, (response) => {
@@ -38,7 +40,8 @@ app.get("/", (req, res) => {
                 recoveredNew: recoveredNew,
                 deathsNew: deathsNew,
                 tests: tests,
-                lastUpdated: lastUpdated
+                lastUpdated: lastUpdated,
+                year:year
             });
         })
     })
@@ -83,7 +86,8 @@ app.post("/", (req, res) => {
                     recoveredNew: recoveredNew,
                     deathsNew: deathsNew,
                     lastUpdated:lastUpdated,
-                    state: state
+                    state: state,
+                    year:year
                 });
 
             }

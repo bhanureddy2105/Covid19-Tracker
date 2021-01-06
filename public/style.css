@@ -73,7 +73,9 @@ input{
     opacity: 0.5;
 }
 
-
+.copyright{
+    color: #646060;
+}
 
 .jumbotron{
     margin: 10px 0;
