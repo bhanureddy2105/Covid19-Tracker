@@ -47,7 +47,7 @@ app.get("/", (req, res) => {
     })
 })
 
-app.all("*",(req,res)=>{
+app.get("/:x",(req,res)=>{
     res.render('error')
 });
 
