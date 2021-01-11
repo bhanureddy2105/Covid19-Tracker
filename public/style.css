@@ -73,6 +73,15 @@ input{
     opacity: 0.5;
 }
 
+.fa-linkedin{
+    color: var(--blue-70,#0073b1);
+}
+
+.fa-instagram{
+    color: #F56040
+}
+
+
 .copyright{
     color: #646060;
 }
