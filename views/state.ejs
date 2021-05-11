@@ -11,27 +11,35 @@
 </nav>
 
 <div class="row">
-    <div class="col-lg-4 col-sm-6">
-        <div class="card p-3" style="width: 16rem; background-color: #add8e6;">
+    <div class="col-lg-3 col-sm-6">
+        <div class="card shadow" style="width: 14rem; background-color: #e28f83;">
+            <div class="card-body">
+                <h5 class="card-title">Today's Cases</h5>
+                <p class="card-text"><%= recoveredNew + newInfected + deathsNew %> </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div class="card shadow" style="width: 14rem; background-color: #add8e6;">
             <div class="card-body">
                 <h5 class="card-title">Total Active Cases</h5>
                 <p class="card-text"><%= activeCases%> </p>
             </div>
         </div>
     </div>
-    <div class="col-lg-4  col-sm-6">
-        <div class="card p-3 " style="width: 16rem; background-color: #a8ee90;">
+    <div class="col-lg-3  col-sm-6">
+        <div class="card shadow" style="width: 14rem; background-color: #a8ee90;">
             <div class="card-body">
                 <h5 class="card-title">Recovered</h5>
-                <p class="card-text"><%= recovered %>(<%= recoveredNew %> &uarr;) </p>
+                <p class="card-text"><%= recovered %> (<%= recoveredNew %> &uarr;) </p>
             </div>
         </div>
     </div>
-    <div class="col-lg-4  col-sm-6">
-        <div class="card p-3 " style="width: 16rem; background-color: #FA8072;">
+    <div class="col-lg-3  col-sm-6">
+        <div class="card shadow" style="width: 14rem; background-color: #FA8072;">
             <div class="card-body">
                 <h5 class="card-title">Deaths</h5>
-                <p class="card-text"><%= deaths%>(<%= deathsNew %> &uarr;)</p>
+                <p class="card-text"><%= deaths%> (<%= deathsNew %> &uarr;)</p>
             </div>
         </div>
     </div>

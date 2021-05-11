@@ -66,11 +66,6 @@ app.post("/", (req, res) => {
                     x = i;
                 } 
             }
-            if(userInput=="Telangana"){
-                state=covidData.regionData[30].region;
-                x=30;
-                userInput=state
-            }
                 if(state === userInput){
                 const active = covidData.regionData[x].totalInfected;
                 const recovered = covidData.regionData[x].recovered;
@@ -78,6 +73,7 @@ app.post("/", (req, res) => {
                 const deaths = covidData.regionData[x].deceased;
                 const deathsNew = covidData.regionData[x].newDeceased;
                 const lastUpdated = covidData.lastUpdatedAtApify;
+                const newInfected = covidData.regionData[x].newInfected;
 
                 res.render("state", {
                     activeCases: active,
@@ -87,7 +83,8 @@ app.post("/", (req, res) => {
                     deathsNew: deathsNew,
                     lastUpdated:lastUpdated,
                     state: state,
-                    year:year
+                    year:year,
+                    newInfected:newInfected
                 });
 
             }

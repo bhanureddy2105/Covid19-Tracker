@@ -7,7 +7,7 @@ body{
 }
 
 .card{
-    margin: 70px 50px 0 50px;
+    margin: 70px 50px 0 20px;
     transition: border-radius 0.1s;
 }
 
@@ -22,7 +22,7 @@ body{
 }
 
 .card-text{
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .marque{
