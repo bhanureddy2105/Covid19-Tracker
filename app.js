@@ -26,6 +26,7 @@ app.get("/", (req, res) => {
         response.on("data", (data) => {
             const covidData = JSON.parse(data);
             const active = covidData.activeCases;
+            const activeNew = covidData.activeCasesNew;
             const recovered = covidData.recovered;
             const recoveredNew = covidData.recoveredNew;
             const deaths = covidData.deaths;
@@ -35,6 +36,7 @@ app.get("/", (req, res) => {
             var state = " "
             res.render("home", {
                 activeCases: active,
+                activeCasesNew:activeNew,
                 recovered: recovered,
                 deaths: deaths,
                 recoveredNew: recoveredNew,
